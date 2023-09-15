@@ -38,8 +38,11 @@ fun main() {
             2 -> {
                 println("Digite o nome do produto para remove-lo da lista de compras:")
                 produto = readLine().toString()
-                listaCompras.remove(produto)
-                println("O produto $produto foi removido da lista de compras.")
+                if (listaCompras.remove(produto)) {
+                    println("O produto $produto foi removido da lista de compras.")
+                } else {
+                    println("O produto $produto não existe na lista de compras.")
+                }
             }
             3 -> {
                 println("Abaixo segue a sua lista de compras:")
